@@ -63,7 +63,7 @@ Make sure the module is set to UART mode if it has jumpers/switches for selectin
 
 4. Run the Python script:
    ```
-   python attendance_system.py
+   python main.py
    ```
 
 5. To deactivate the virtual environment when done:
