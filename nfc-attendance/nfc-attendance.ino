@@ -11,26 +11,26 @@ byte nuidPICC[4];
 void setup(void) {
 
   Serial.begin(115200);
-  Serial.println("Hello Maker!");
+  //Serial.println("Hello Maker!");
   //  Serial2.begin(115200, SERIAL_8N1, RXD2, TXD2);
 
   nfc.begin();
 
   uint32_t versiondata = nfc.getFirmwareVersion();
   if (! versiondata) {
-    Serial.print("Didn't Find PN53x Module");
+    //Serial.print("Didn't Find PN53x Module");
     while (1); // Halt
   }
 
   // Got valid data, print it out!
-  Serial.print("Found chip PN5"); Serial.println((versiondata >> 24) & 0xFF, HEX);
-  Serial.print("Firmware ver. "); Serial.print((versiondata >> 16) & 0xFF, DEC);
-  Serial.print('.'); Serial.println((versiondata >> 8) & 0xFF, DEC);
+  //Serial.print("Found chip PN5"); Serial.println((versiondata >> 24) & 0xFF, HEX);
+  //Serial.print("Firmware ver. "); Serial.print((versiondata >> 16) & 0xFF, DEC);
+  //Serial.print('.'); Serial.println((versiondata >> 8) & 0xFF, DEC);
 
   // Configure board to read RFID tags
   nfc.SAMConfig();
 
-  Serial.println("Ready to Scan NFC Cards");
+  //Serial.println("Ready to Scan NFC Cards");
 
 }
 
