@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 #include "PN532_SWHSU.h"
 #include "PN532.h"
-SoftwareSerial SWSerial( 2, 3 ); // RX, TX
+SoftwareSerial SWSerial( 2, 3 ); // SDA, SCL
 PN532_SWHSU pn532swhsu( SWSerial );
 PN532 nfc( pn532swhsu );
 
